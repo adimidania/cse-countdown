@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo-cse.svg">
+    <title>CSE's Countdown</title>
+</head>
+<body>
+    <!-- PATTERNS -->
+    <div class="patterns">
+        <img src="assets/pattern-top.svg" alt="" class="pattern-top"/>
+        <img src="assets/pattern-bottom.svg" alt="" class="pattern-bottom"/>
+    </div>
+        <div id="form-container">
+            <h1>CSE’S LIVE COUNTDOWN</h1>
+            <div class="formm-container">
+                <form class="talk-infos">
+                    <div class="infos">
+                        <input type="text" placeholder="Write the event's name" id="input-event" required/>
+                        <input type="text" placeholder="Write the session's name" id="input-talk-name" required/>
+                        <div class="time-form-edit">
+                            <input type="number" value="00" onfocus="this.value = ''" onchange="checkMinutes()" id="form-min">
+                            <p id="time-separator">:</p>
+                            <input type="number" value="00" onfocus="this.value = ''" onchange="checkSeconds()" id="form-sec">                        </div>
+                    </div>
+                    <div class="buttons">
+                        <input type="button" id="submit-button" onclick="saveInfo()" value="START"/>
+                    </div>
+                </form>
+            </div>
+            <div class="container-logo">
+                <img src="assets/logo-cse.svg" alt="" class="logo-bottom"/>
+            </div>
+        </div>
+        <div id="timer-container">
+            <div class="title">
+                <h1 id="event-name"></h1>
+                <div class="talk">
+                    <p id="current-talk"></p>
+                </div>
+            </div>
+            <div class="timer">
+                <div class="logo">
+                    <img src="assets/logo-cse.svg" alt="" class="logo"/>
+                </div>
+                <div id="music">
+                    
+                </div>
+                <div class="starting">
+                    <h2>We're starting in</h2>
+                    <p id="countdown"></p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="back" onclick="goToForm()"><i class="fas fa-long-arrow-alt-left"></i></button>
+                <button class="play-stop" id="play-stop" onclick="controlCountDown()"><i class="fas fa-play" id="play-stop-icon"></i></button>
+                <button class="reset" onclick="resetCountDown()"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+</body>
+

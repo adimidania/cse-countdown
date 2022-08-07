@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+:root {
+    --blue: #06A6FF;
+    --yellow: #FCF300;
+    --red: #FF0000;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/** PATTERNS **/
+
+.patterns {
+    z-index:-99;
+}
+
+.pattern-top, .pattern-bottom {
+    position:fixed;
+}
+
+.pattern-top {
+    top:0;
+    right:0;
+}
+
+.pattern-bottom {
+    bottom:0;
+    left:0;
+}
+
+/** FORM **/
+.formm-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:98%;
+    width:80%;
+    min-width: 350px;
+    padding-top: 1%;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-logo {
+    text-align: right;
+}
+
+#form-container h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    color: var(--blue);
+    width: 528px;
+    line-height: 55px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+.talk-infos {
+    padding:40px;
+    background-color: var(--blue);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    min-width: 350px;
+}
+
+.talk-infos .infos, .talk-infos .buttons {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center
+}
+
+#input-event, #input-talk-name {
+    background: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    border:none;
+    padding:0 20px;
+    font-size:17px;
+    letter-spacing: 1px;
+    width: 425px;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#submit-button {
+    width: 218px;
+    height: 85px;
+    margin-bottom:25px;
+    border-radius: 15px;
+    border:none;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    background-color: var(--yellow);
+    color:white;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #FFF947;
+}
+
+.time-form-edit {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.time-form-edit input[type="text"] {
+    color: var(--blue);  
+}
+
+#time-separator {
+    color:white;
+    font-size: 120px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#form-min, #form-sec {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 200px;
+    font-size: 120px;
+    font-weight: 700;
+    background-color: var(--blue); 
+    color:white;  
+    border:none; 
+}
+
+#form-min::placeholder, #form-sec::placeholder {
+    color:white;
+}
+
+/** TIMER **/
+
+#timer-container {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+    width:85%;
+}
+#timer-container .title h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    color: var(--blue);
+    letter-spacing: 2px;
+    font-weight: 700;
+    max-width: 80%;
+    margin-top: 1%;
+}
+
+#timer-container .title .talk {
+    display: flex;
+    font-weight: 700;
+    font-size: 25px;
+    max-width: 65%;
+}
+
+#timer-container .timer {
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#timer-container .starting h2 {
+    color:var(--blue);
+    font-size:42px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    width:410px;
+    text-align: center;
+}
+
+#timer-container .starting p {
+    color:black;
+    font-size:125px;
+    text-align: center;
+    letter-spacing: 8px;
+    font-weight: 700;
+    width:410px;
+}
+
+#countdown {
+    letter-spacing: 8px;
+}
+
+#timer-container .timer .logo img {
+    width:130px;
+    height:auto;
+    margin-right:30px;
+}
+
+#timer-container .buttons button {
+    width: 68px;
+    height: 68px;
+    border:none;
+    color:white;
+    border-radius: 20px;
+    font-size:20px;
+    margin-left:20px;
+    cursor: pointer;
+}
+
+.back {
+    background-color: var(--blue);
+}
+
+.play-stop {
+    background-color: var(--red);
+}
+
+.reset {
+    background-color: var(--yellow);
+}
+
+.back:hover {
+    background-color: #1FB0FF;
+}
+
+.play-stop:hover {
+    background-color: #FF1F1F;
+}
+
+.reset:hover {
+    background-color: #FFF947;
+}
+
+#timer-container .buttons {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 1%;
+}
+
+@media screen and (max-height:769px) {
+    .talk-infos {
+        padding:35px;
+    }
+    .pattern-bottom {
+        height:150px;
+        width:auto;
+    }
+    .pattern-top {
+        height:210px;
+        width:auto;
+    }  
+}
+
+@media screen and (max-height:702px) {
+    #input-event, #input-talk-name {
+        width: 425px;
+        height: 55px;
+        margin-bottom: 17px;
+    }
+
+    .time-form-edit {
+        width: 425px;
+    }
+
+    #input-talk-name {
+        margin-bottom: 0px; 
+    }
+    
+    .pattern-bottom {
+        height:120px;
+        width:auto;
+    }
+
+    .pattern-top {
+        height:170px;
+        width:auto;
+    }
+    .container-logo img {
+        text-align: right;
+        height:95px;
+        width:auto;
+    }    
+}
+
+
+@media screen and (max-width:1093px) {
+    #input-event, #input-talk-name {
+        width: 385px;
+    }
+
+    .time-form-edit {
+        width: 400px;
+    }
+    
+    #form-min, #form-sec {
+        width: 180px;
+    }
+
+}
+
+@media screen and (max-width:995px) {
+    #input-event, #input-talk-name {
+        width: 330px;
+    }
+
+    .time-form-edit {
+        width: 350px;
+    }
+    
+    #form-min, #form-sec {
+        width: 150px;
+    }
+
+    #submit-button {
+        width: 190px;
+        height: 77px;
+    }
+    #time-separator {
+        font-size: 100px;
+    }
+    
+    #form-min, #form-sec {
+        font-size: 100px; 
+    }
+}
+
+@media screen and (max-width:851px) {
+    body {
+        min-height: 100vh;
+        overflow: auto;
+    }
+    body {
+        min-height: 100vh;
+        overflow: auto;
+    }
+
+    .talk-infos {
+        flex-direction: column;
+    }
+
+    #submit-button {
+        width: 330px;
+        height: 75px;
+    }
+    .pattern-bottom {
+        width: 0px;
+    }
+    .pattern-top {
+        height:0;
+    }
+    #form-container {
+        width:410px;
+    }
+    #form-container h1 {
+        text-align:center;
+        width: auto;
+        font-size: 55px;
+        line-height: 65px;
+    }
+    .container-logo {
+        visibility: hidden;
+        height:0;
+    }  
+    #timer-container .title h1 {
+        text-align:center;
+        width: auto;
+        font-size: 50px;
+    }
+    #timer-container .buttons {
+        justify-content: center;
+    }
+    #timer-container .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        
+    #timer-container .starting h2 {
+        font-size:37px;
+        letter-spacing: 1px;
+        width:375px;
+        text-align: center;
+    }
+
+    #timer-container .starting p {
+        font-size:108px;
+        text-align: center;
+        letter-spacing: 7.5px;
+        font-weight: 700;
+        width:375px;
+    }
+
+    #timer-container .timer .logo img {
+        width:110px;
+        height:auto;
+    }
+
+    
+}
+
+
+@media screen and (max-width:556px) {
+    .pattern-bottom {
+        height: 0;
+    }
+    #form-container h1 {
+        font-size: 50px;
+        line-height: 65px;
+    }
+    #timer-container .starting h2 {
+        font-size:28px;
+        width:280px;
+    }
+    
+    #timer-container .starting p {
+        font-size:90px;
+        letter-spacing: 5px;
+        width:280px;
+    }
+    #timer-container .timer .logo img {
+        width:90px;
+        height:auto;
+    }
+    
+}
+
+@media screen and (max-width:456px) {
+    #form-container h1 {
+        font-size: 40px;
+        color:white;
+    }
+    
+    #timer-container .title h1 {
+        text-align:center;
+        width: auto;
+        font-size: 40px;
+    }
+    .container-logo img {
+        height:60px;
+        width:auto;
+    }
+
+    #timer-container h1 {
+        font-size:30px;
+    }
+    #timer-container .starting h2 {
+        font-size:30px;
+    }
+    #timer-container .timer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #timer-container .starting p {
+        font-size:90px;
+        text-align: center;
+    }
+    #timer-container .timer .logo img {
+        width:110px;
+        height:auto;
+        margin-right:0px;
+        margin-bottom: 10px;
+
+    }
+    #timer-container .buttons .back {
+        margin-left:0px;
+    }
+
+    #input-event, #input-talk-name {
+        width: 300px;
+    }
+
+    .time-form-edit {
+        width: 300px;
+    }
+    
+    #form-min, #form-sec {
+        width: 140px;
+    }
+
+    #submit-button {
+        width: 300px;
+        height: 77px;
+    }
+    #time-separator {
+        font-size: 90px;
+    }
+    
+    #form-min, #form-sec {
+        font-size: 90px; 
+    }
+    #form-container {
+        width:100%;
+        height:100%;
+        background-color: var(--blue);
+    }    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
